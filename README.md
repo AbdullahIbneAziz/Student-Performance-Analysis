@@ -70,7 +70,8 @@ The project includes:
 - Predictive modeling
 
 ## Results and Insights
-[To be updated with specific findings from the analysis]
+Here, Decision Tree has the highest accuracy of 97%, Random Forest has 94%, and Logistic Regression has 50%.
+Based on the study of private universities in Bangladesh, key insights reveal that machine learning models, particularly Decision Tree with 97.10% accuracy, are effective in predicting student academic performance. Factors positively influencing performance include SGPA, CGPA, attendance, study hours, and merit scholarships. Conversely, high social media usage and probation status show significant negative correlations with academic success. These findings emphasize the importance of addressing study habits and social media use while highlighting the potential for targeted interventions based on predictive modeling to improve student outcomes
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
