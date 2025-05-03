@@ -3,6 +3,8 @@
 ## Project Overview
 This project focuses on analyzing student performance data to gain insights into various factors that influence academic success. The analysis is conducted using Python, with a focus on data science and machine learning techniques.
 
+![Image](https://github.com/user-attachments/assets/fd1335a2-7293-4e22-989c-4700473a721c)
+
 ## Project Structure
 ```
 Student-Performance-Analysis/
@@ -21,6 +23,7 @@ Student-Performance-Analysis/
 - Machine learning model implementation
 - Performance prediction capabilities
 - Interactive Jupyter notebook interface
+- Web Application
 
 ## Prerequisites
 - Python 3.x
