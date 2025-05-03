@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card mt-5">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="text-center">Student Performance Predictor</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="predictionForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="uni_admssn_year" class="form-label">University Admission Year</label>
+                                        <input type="number" class="form-control" id="uni_admssn_year" name="uni_admssn_year" min="2018" max="2023" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="gender" class="form-label">Gender</label>
+                                        <select class="form-select" id="gender" name="gender" required>
+                                            <option value="0">Female</option>
+                                            <option value="1">Male</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="age" class="form-label">Age</label>
+                                        <input type="number" class="form-control" id="age" name="age" min="18" max="30" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="hsc_pass_year" class="form-label">HSC Pass Year</label>
+                                        <input type="number" class="form-control" id="hsc_pass_year" name="hsc_pass_year" min="2015" max="2023" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="currnt_sem" class="form-label">Current Semester</label>
+                                        <input type="number" class="form-control" id="currnt_sem" name="currnt_sem" min="1" max="12" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="merit_scholarship" class="form-label">Merit Scholarship</label>
+                                        <select class="form-select" id="merit_scholarship" name="merit_scholarship" required>
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="use_uni_transport" class="form-label">Use University Transport</label>
+                                        <select class="form-select" id="use_uni_transport" name="use_uni_transport" required>
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="study_hour" class="form-label">Study Hours per Day</label>
+                                        <input type="number" class="form-control" id="study_hour" name="study_hour" min="1" max="8" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="learning_mode" class="form-label">Learning Mode</label>
+                                        <select class="form-select" id="learning_mode" name="learning_mode" required>
+                                            <option value="0">Offline</option>
+                                            <option value="1">Online</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="has_smart_phone" class="form-label">Has Smart Phone</label>
+                                        <select class="form-select" id="has_smart_phone" name="has_smart_phone" required>
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="has_pc" class="form-label">Has PC</label>
+                                        <select class="form-select" id="has_pc" name="has_pc" required>
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="social_media_time" class="form-label">Social Media Time (hours/day)</label>
+                                        <input type="number" class="form-control" id="social_media_time" name="social_media_time" min="0" max="10" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="english_skill" class="form-label">English Skill</label>
+                                        <select class="form-select" id="english_skill" name="english_skill" required>
+                                            <option value="0">Poor</option>
+                                            <option value="1">Good</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="avg_attendance" class="form-label">Average Attendance (%)</label>
+                                        <input type="number" class="form-control" id="avg_attendance" name="avg_attendance" min="0" max="100" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="probation" class="form-label">On Probation</label>
+                                        <select class="form-select" id="probation" name="probation" required>
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="suspension" class="form-label">Suspended</label>
+                                        <select class="form-select" id="suspension" name="suspension" required>
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="faculty_consultency" class="form-label">Faculty Consultation</label>
+                                        <select class="form-select" id="faculty_consultency" name="faculty_consultency" required>
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="relation_sts" class="form-label">Relationship Status</label>
+                                        <select class="form-select" id="relation_sts" name="relation_sts" required>
+                                            <option value="0">Single</option>
+                                            <option value="1">In Relationship</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="co_curri_act" class="form-label">Co-curricular Activities</label>
+                                        <select class="form-select" id="co_curri_act" name="co_curri_act" required>
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="living_sts" class="form-label">Living Status</label>
+                                        <select class="form-select" id="living_sts" name="living_sts" required>
+                                            <option value="0">With Family</option>
+                                            <option value="1">Alone</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="sgpa" class="form-label">SGPA</label>
+                                        <input type="number" class="form-control" id="sgpa" name="sgpa" step="0.01" min="0" max="4" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="phy_disb" class="form-label">Physical Disability</label>
+                                        <select class="form-select" id="phy_disb" name="phy_disb" required>
+                                            <option value="0">No</option>
+                                            <option value="1">Yes</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="cgpa" class="form-label">CGPA</label>
+                                        <input type="number" class="form-control" id="cgpa" name="cgpa" step="0.01" min="0" max="4" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="comp_cred" class="form-label">Completed Credits</label>
+                                        <input type="number" class="form-control" id="comp_cred" name="comp_cred" min="0" max="150" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg">Predict Student Status</button>
+                            </div>
+                        </form>
+
+                        <div id="result" class="mt-4 text-center" style="display: none;">
+                            <h3>Prediction Result</h3>
+                            <div class="alert alert-info" role="alert">
+                                <h4 id="predictionText"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
