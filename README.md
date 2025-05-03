@@ -21,6 +21,7 @@ Student-Performance-Analysis/
 - Machine learning model implementation
 - Performance prediction capabilities
 - Interactive Jupyter notebook interface
+- Web Application
 
 ## Prerequisites
 - Python 3.x
