@@ -1,9 +1,9 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 import joblib
 import numpy as np
 import pandas as pd
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='.', template_folder='.')
 
 # Load the trained model
 model = joblib.load('Model/best_model.joblib')
@@ -11,6 +11,10 @@ model = joblib.load('Model/best_model.joblib')
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/script.js')
+def serve_script():
+    return send_from_directory('.', 'script.js')
 
 @app.route('/predict', methods=['POST'])
 def predict():
