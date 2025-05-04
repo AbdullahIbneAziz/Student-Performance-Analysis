@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "assets/app.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/predict", "dest": "assets/app.py" },
+    { "src": "/script.js", "dest": "assets/script.js" },
+    { "src": "/", "dest": "assets/index.html" }
+  ]
+} 
