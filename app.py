@@ -10,11 +10,11 @@ model = joblib.load('Model/best_model.joblib')
 
 @app.route('/')
 def home():
-    return send_from_directory('.', 'index.html')
+    return send_from_directory('assets', 'index.html')
 
 @app.route('/script.js')
 def serve_script():
-    return send_from_directory('.', 'script.js')
+    return send_from_directory('assets', 'script.js')
 
 @app.route('/predict', methods=['POST'])
 def predict():
