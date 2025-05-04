@@ -60,16 +60,15 @@ def predict():
         
         status = status_map.get(prediction, f"Unknown Status ({prediction})")
         
-        # Return prediction
-        return jsonify({'prediction': status})
         # Return prediction with robust mapping
-        status = status_map.get(prediction, f"Unknown Status ({prediction})")
         return jsonify({
             'success': True,
             'prediction': str(prediction),
             'status': status
         })
     except Exception as e:
+        import traceback
+        print('Prediction error:', traceback.format_exc())
         return jsonify({
             'success': False,
             'error': str(e)
