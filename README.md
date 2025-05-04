@@ -3,7 +3,11 @@
 ## Project Overview
 This project focuses on analyzing student performance data to gain insights into various factors that influence academic success. The analysis is conducted using Python, with a focus on data science and machine learning techniques.
 
-![Image](https://github.com/user-attachments/assets/fd1335a2-7293-4e22-989c-4700473a721c)
+![Image](https://github.com/user-attachments/assets/669ddc90-3602-427a-92bc-f10f5888a121)
+
+![Image](https://github.com/user-attachments/assets/5dde86ee-711c-4976-b6c5-83e19e2b44f3)
+
+![Image](https://github.com/user-attachments/assets/88297430-b5b0-4db7-9be0-9bbfef7d7e97)
 
 ## Project Structure
 ```
