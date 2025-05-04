@@ -9,8 +9,8 @@ This project focuses on analyzing student performance data to gain insights into
 
 ![Image](https://github.com/user-attachments/assets/88297430-b5b0-4db7-9be0-9bbfef7d7e97)
 
-Project Demonstration
-[![Watch the video](https://raw.githubusercontent.com/AbdullahIbneAziz/Student-Performance-Analysis/branch/main/Video/thumbnail.jpg)](https://raw.githubusercontent.com/AbdullahIbneAziz/Student-Performance-Analysis/branch/main/Video/video.mp4)
+Project Demonstration(Watch the video in the given link)
+https://github.com/user-attachments/assets/cc2c4612-1bcc-464d-b71c-158ecfa5a3c3
 
 ## Project Structure
 ```
